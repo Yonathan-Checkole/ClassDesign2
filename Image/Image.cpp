@@ -112,10 +112,6 @@ void Image::setFlashEnable(bool flashEnabled) {
     _flashEnabled = flashEnabled;
 }
 
-void printImageMetadata(Image image) {
-    std::cout << "File Name: " << image.getFileName() << "\nImage Type: " << image.getImageType() << "\nDate: " << image.getMonth() << "/" << image.getDay() << "/" << image.getYear() << "\nSize: " << image.getSize() << " MB\nAuthor: " << image.getAuthorName() << "\nDimensions: " << image.getWidth() << "x" << image.getHeight() << "\nAperture Size: " << image.getApertureSize() << "\nExposure Time: " << image.getExposureTime() << "\nIso Value: " << image.getIsoValue() << "\nFlash Enabled: " << image.isFlashEnabled() << "\n";
-}
-
 std::ostream& operator<< (std::ostream& os, const Image image) {
     os << "File Name: " << image._fileName << "\nimage Type: " << image._imageType << "\nDate: " << image._month << "/" << image._day << "/" << image._year << "\nSize: " << image._size << " MB\nAuthor: " << image._authorName << "\nDimensions: " << image._width << "x" << image._height << "\nAperture Size: " << image._apertureSize << "\nExposure Time: " << image._exposureTime << "\nIso Value: " << image._isoValue << "\nFlash Enabled: " << image._flashEnabled << "\n";
     return os;
